@@ -29,7 +29,7 @@ class BookController {
         }
     }
 
-    // Formularz edycji książki
+    // edycja książki
     async getEditBookForm(req, res) {
         try {
             const book = await Book.findById(req.params.id);

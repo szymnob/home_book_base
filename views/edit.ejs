@@ -1,22 +1,24 @@
-<form action="/edit/<%= book._id %>?_method=PUT" method="POST">
+<form id="addBook" action="/edit/<%= book._id %>?_method=PUT" method="POST">
     <input type="hidden" name="_method" value="PUT">  <!-- Używamy method-override, aby wymusić metodę PUT -->
 
     <div class="mb-3">
         <label class="form-label">Tytuł:</label>
-        <input type="text" class="form-control" name="title" value="<%= book.title %>" required>
+        <input id="title" type="text" class="form-control" name="title" value="<%= book.title %>" required>
     </div>
 
     <div class="mb-3">
         <label class="form-label">Autor:</label>
-        <input type="text" class="form-control" name="author" value="<%= book.author %>" required>
+        <input  id="author" type="text" class="form-control" name="author" value="<%= book.author %>" required>
     </div>
 
     <div class="mb-3">
         <label class="form-label">Rok wydania:</label>
-        <input type="number" class="form-control" name="year" value="<%= book.year %>" required>
+        <input id="year" type="number" class="form-control" name="year" value="<%= book.year %>" required>
     </div>
 
     <button type="submit" class="btn btn-success">Zapisz zmiany</button>
 </form>
 
 <a href="/" class="btn btn-secondary mt-3">Powrót</a>
+
+<script src="/js/validation.js">  </script>

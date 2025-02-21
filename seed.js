@@ -1,10 +1,8 @@
 require('dotenv').config();
 const mongoose = require('mongoose');
-const Book = require('./models/Book'); // Importujemy model książki
+const Book = require('./models/Book');
 
 mongoose.connect(process.env.DB_URI + "?authSource=admin", {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
 }).then(() => console.log("Connected"))
     .catch(err => console.error("Error", err));
 
